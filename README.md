@@ -1,9 +1,11 @@
 # Hacking Minigames Repository
-#### Currently (Version: 1.0) Includes:
+#### Version: 1.0 Includes:
 - [Simon Says](https://www.youtube.com/watch?v=eKGQmEtMhuU)
 - [Lights Out](https://www.youtube.com/watch?v=jDQryRb34KU)
 - [Hacking Device](https://www.youtube.com/watch?v=SG7AmPRSVug)**
 - [Numbers | Password](https://youtu.be/Q1GYSgzDwW0)
+#### Currently (Version: 1.1) Includes:
+- [Untangle](https://youtu.be/VvjPeOxkdq0)
 
 #### How to trigger hacking events:
 Every minigame has the same trigger, but you just replace one line, or you can simple copy & paste the particular minigame trigger below:
@@ -58,6 +60,17 @@ Every minigame has the same trigger, but you just replace one line, or you can s
             print("You failed, unlucky.")
         end
 ***Beta, not recommended for use in a live server.*
+
+#### Untangle:
+        ---@param points number || description: "Determines the amount of dots on the untangle game."
+        ---@param time number || description: "In seconds, it determines the time until fail on the minigame!"
+        local result = exports['untangle']:StartUntangleGame(points, time)
+
+                if result then -- Success
+            print("Wow! You did it!")
+        else -- Failed
+            print("You failed, unlucky.")
+        end
 
 ## Install: 
 *Installing is very simple.* Each folder is its own resource. So, just download the repository, select the minigames you wish to use and drag them into your standalone folder. Then, make sure you ensure the resources in your console, or put them in an already ensured folder.
